@@ -1,7 +1,8 @@
 def count_vowels(text):
+    vowels = ['a', 'e', 'i', 'o', 'u']
     count = 0
     for a in text:
-        if a == 'a' or a == 'i' or a == 'o' or a == 'e' or a == 'u':
+        if a in vowels:
             count += 1
     return count
 
