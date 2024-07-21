@@ -11,6 +11,7 @@ if __name__ == '__main__':
         name, *line = input().split()
         scores = list(map(float, line))
         student_marks[name] = scores
+    print(student_marks)
     query_name = input()
     
     avg_marks = calc_avg(query_name, student_marks)

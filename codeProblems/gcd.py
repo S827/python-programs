@@ -1,4 +1,4 @@
-import math
+
 def gcd(a, b):
     while(True):
         r = a - b * (a // b)
