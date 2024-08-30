@@ -24,4 +24,4 @@ def long_time1():
 
 
 long_time()
-long_time1()
+# long_time1()
