@@ -1,16 +1,19 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
+import utility
+from utility import multiply, divide
+# from utility import *
+# from shopping.more_shopping.shopping_cart import buy
+from shopping.more_shopping import shopping_cart
+from pythonBuiltInModules_175 import randomFunc
 if __name__ == '__main__':
-    print_hi('PyCharm')
+      print('Please run this')
+      print(multiply(10, 22))
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+      print(divide(300, 15))
+
+      # print(buy)
+
+      # print(buy('car'))
+      print(shopping_cart
+            .buy('car'))
+      print(__name__)
+      print(type(utility.st1))
