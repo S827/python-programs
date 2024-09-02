@@ -1,7 +1,8 @@
 # generate a number 1 - 10
 import random
+import sys
 
-num = random.randint(0, 10)
+num = random.randint(int(sys.argv[1]), int(sys.argv[2]))
 # input from user for the guess
 
 # check the input is a number
