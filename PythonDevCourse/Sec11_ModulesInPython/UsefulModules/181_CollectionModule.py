@@ -26,7 +26,8 @@ print(dict2['z'])
 
 
 # OrderedDict
-
+# Recently, the Python has made Dictionaries ordered by default! So unless you need to maintain older version of Python
+# (older than 3.7), you no longer need to use ordered dict, you can just use regular dictionaries!
 d = OrderedDict()
 d['a'] = 1
 d['b'] = 2
