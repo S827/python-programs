@@ -18,6 +18,7 @@
 # hello('Hiiii')
 # # 6. wrap_func is executed with 'Hiiii' as the argument.
 
+import pdb
 print('modification with added parameter'.upper())
 
 # # 3. my_decorator is called with 'hello' as an argument.
@@ -49,7 +50,9 @@ print('Another modification with args and kwargs'.upper())
 
 
 def my_decorator(func):
+    pdb.set_trace()
     # 4. wrap_func is defined to take one argument 'x'.
+
     def wrap_func(*args, **kwargs):
         print('******')  # 7. Prints the first line of asterisks.
         # 8. Calls the original 'hello' function with the argument 'Hiiii'.
