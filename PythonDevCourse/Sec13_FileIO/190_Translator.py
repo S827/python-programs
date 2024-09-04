@@ -1,6 +1,6 @@
 from translate import Translator
 
-translator = Translator(to_lang='')
+translator = Translator(to_lang='de')
 
 text = 'I am doing fine'
 trans_text = translator.translate(text)
