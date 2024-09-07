@@ -8,5 +8,5 @@ pattern = re.compile(r'^[A-Za-z\d#$%@]{7,}\d$')
 
 string = 'ShaktiOP1@1'
 
-check = pattern.search(string)
+check = pattern.fullmatch(string)
 print(check)
