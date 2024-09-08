@@ -9,8 +9,8 @@ class User():  # user parenthesis in class declaration to make the class to be a
 
 
 # by passign class name as argument in class declaration, it means wizard class will inherit User class
-class Wizard(User)
-   def __init__(self, name, power, email):
+class Wizard(User):
+    def __init__(self, name, power, email):
         # self.email = email # INEFFICIENT
         # here User.__init__(self, email) OR super().__init__(email) can be called also super() don't require self
         super().__init__(email)
