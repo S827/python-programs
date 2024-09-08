@@ -25,10 +25,27 @@ sharp_img.save('sharp-pikachu.png', 'png')
 
 grey_img = img.convert('L')  # converts image to grey color, greyscale
 grey_img.save('grey-img.png', 'png')
-grey_img.show()  # display the image
+# grey_img.show()  # display the image
 rot_grey_img = grey_img.rotate(45)
 rot_grey_img.save('rot-grey.png', 'png')
-rot_grey_img.show()
+# rot_grey_img.show()
 grey_resized = grey_img.resize((300, 300))  # resize accepts tuple argument
 grey_resized.save('grey-resize.png', 'png')
-grey_resized.show()
+# grey_resized.show()
+
+box = (50, 50, 200, 200)
+crop_img = sharp_img.crop(box)
+crop_img.save('crop_img.png', 'png')
+# crop_img.show()
+
+img1 = Image.open('./astro.jpg')
+print(img1.size)
+new_img1 = img1.resize((400, 200))  # resize lose the aspect ratio
+new_img1.save('astro-resized.png', 'png')
+img1.thumbnail((400, 200))
+img1.save('astr-thumbnail.jpg')
+print(img1.size)
+img2 = Image.open('./astro.jpg')
+img2.thumbnail((400, 400))
+img2.save('astro-reresized.jpg')
+print(img2.size)
