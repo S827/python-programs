@@ -26,6 +26,8 @@ for name in os.listdir(source):
     path1 = f"./{source}{name}"
     # print(path1)
     img = Image.open(path1)
-    path2 = f"./{destination}{name[:-4]}.png"
+    new_name = os.path.splitext(name)
+    path2 = f"./{destination}{new_name[0]}.png"
+    # path2 = f"./{destination}{name[:-4]}.png" # using list slicing, somehow ineffcient when file format is changed
     # print(path2)
     img.save(path2, 'png')
