@@ -1,26 +1,26 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for, request, redirect
 app = Flask(__name__)
 # print(__name__)
 
 
-@app.route('/<username>/<int:post_id>')
-def hello_world(username=None, post_id=None):
-    return render_template('index.html', name=username, post_id=post_id)
+@app.route('/')
+def my_home():
+    return render_template('index.html')
 
 
-@app.route('/about.html')
-def about():
-    return render_template('about.html')
+@app.route('/<string:page_name>')
+def html_page(page_name):
+    return render_template(page_name)
 
 
-@app.route('/blog')
-def blog():
-    return 'Today I have not done much, mostly wasted my time watching shitty short videos on social media app.'
-
-
-@app.route('/blog/2024/dogs')
-def blog2():
-    return 'My pet dog name was dogya, now he is no more. He was really cute and agressive dog and I miss him very much.'
+@app.route('/submit_form', methods=['POST', 'GET'])
+def submit_form():
+    if request.method == 'POST':
+        data = request.form.to_dict()
+        print(data)
+        return redirect('/thankyou.html')
+    else:
+        return 'something went wrong, try again...'
 
 
 if __name__ == '__main__':
